@@ -12,16 +12,16 @@ namespace Upper.CSharpIniciante.Main
         static void Main(string[] args)
         {
             // Desafio 1 (Soma dos números de 1 a 10 com loop for)
-            /* short totalSum = 0;
+            short totalSum = 0;
 
             for (short i = 0; i <= 10; i++)
             {
                 totalSum += i;
             }
 
-            Console.Write($"Total sum by 0 to 10 is: {totalSum}"); */
+            Console.Write($"Total sum by 0 to 10 is: {totalSum}");
 
-            // Desafio 2
+            // Desafio 2 (IMC)
             Console.Write("Digite o seu peso (kg): ");
             var weight = Convert.ToDouble(Console.ReadLine().Replace(".",","));
 
@@ -49,6 +49,36 @@ namespace Upper.CSharpIniciante.Main
             {
                 Console.Write("Você se encontra com obesidade grau 3.");
             }
+
+            // Desafio 3 (Calculadora de aritmética básica)
+            Console.Write("Digite o primeiro número da operação: ");
+            var number1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o operador: ");
+            var mathOperator = Console.ReadLine();
+
+            Console.Write("Digite o segundo número da operação: ");
+            var number2 = Convert.ToDouble(Console.ReadLine());
+
+            // Optei por switch para treinar e variar do if
+            switch (mathOperator)
+            {
+                case "+":
+                    Console.Write($"{number1} {mathOperator} {number2} = {number1 + number2}");
+                    break;
+                case "-":
+                    Console.Write($"{number1} {mathOperator} {number2} = {number1 - number2}");
+                    break;
+                case "/":
+                    Console.Write($"{number1} {mathOperator} {number2} = {number1 / number2}");
+                    break;
+                case "*":
+                    Console.Write($"{number1} {mathOperator} {number2} = {number1 * number2}");
+                    break;
+                default:
+                    Console.Write("Houve um erro inesperado durante a conta.");
+                    break;
+            } 
         }
     }
 }
